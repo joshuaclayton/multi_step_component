@@ -1,0 +1,9 @@
+<ol>
+  <% steps.each.with_index do |_, index| %>
+    <li>
+      <button data-disable-forward-jump="<%= disable_forward_jump %>" data-multi-step-target="navigationButton" data-action="multi-step#visitStep" data-step-index="<%= index %>">
+        <%= index + 1 %>
+      </button>
+    </li>
+  <% end %>
+</ol>

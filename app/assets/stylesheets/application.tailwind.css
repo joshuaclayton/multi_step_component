@@ -2,12 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
-  }
+.multi-step ol {
+  @apply flex flex-row;
 }
 
-*/
+.multi-step ol li {
+  @apply p-2;
+}
+
+.multi-step button {
+  @apply py-0 px-2 border border-gray-300 rounded;
+}
+
+.multi-step button[disabled] {
+  @apply bg-gray-100;
+}
+
+.multi-step .current {
+  @apply bg-green-200;
+}
+
+.multi-step .previous {
+  @apply bg-red-200;
+}
+
+.multi-step .upcoming {
+  @apply bg-yellow-200;
+}

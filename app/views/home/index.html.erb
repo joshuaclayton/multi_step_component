@@ -1,0 +1,37 @@
+<%= render MultiStep::ContainerComponent.new do |multi_step| %>
+  <% multi_step.step do %>
+    Step 1
+  <% end %>
+
+  <% multi_step.step do %>
+    Step 2
+  <% end %>
+
+  <% multi_step.step do %>
+    Step 3
+  <% end %>
+
+  <% multi_step.step do %>
+    Step 4
+  <% end %>
+
+  <% multi_step.step do %>
+    Step 5
+  <% end %>
+
+  <% multi_step.step do %>
+    Step 6
+  <% end %>
+
+  <div class="border rounded-lg border-gray-300 p-4">
+    <%= multi_step.step_content %>
+  </div>
+
+  <div class="flex flex-row justify-between">
+    <%= multi_step.previous_button %>
+    <%= multi_step.navigation(disable_forward_jump: true) %>
+    <%= multi_step.next_button do %>
+      Hi there
+    <% end %>
+  </div>
+<% end %>
